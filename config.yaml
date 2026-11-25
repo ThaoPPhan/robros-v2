@@ -1,0 +1,20 @@
+# Tunable settings for robros-v2. Change numbers here, not in the code.
+
+pico:
+  port: /dev/ttyACM0
+  baud: 115200          # USB CDC ignores the real baud rate, but pyserial needs one
+
+lidar:
+  port: /dev/serial0
+  baud: 230400
+
+camera:
+  type: picamera2        # "picamera2" (ribbon camera) or "usb" (cv2.VideoCapture)
+  index: 0               # camera index, only used when type is "usb"
+  width: 320
+  height: 240
+
+check:
+  pico_timeout_s: 2.0
+  lidar_timeout_s: 2.0
+  camera_timeout_s: 2.0
